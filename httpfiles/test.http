@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:10000
+
+### Get all articles
+GET {{baseUrl}}/articles
+
+### Get single article
+GET {{baseUrl}}/articles/1
+
+### Create new article
+POST {{baseUrl}}/articles
+Content-Type: application/json
+
+{
+    "id": "3",
+    "title": "Third Article",
+    "desc": "Description of third article",
+    "content": "Content of third article"
+}
+
+### Update article
+PUT {{baseUrl}}/articles/3
+Content-Type: application/json
+
+{
+    "id": "3",
+    "title": "Updated Third Article",
+    "desc": "Updated description of third article",
+    "content": "Updated content of third article"
+}
+
+### Delete article
+DELETE {{baseUrl}}/articles/3
